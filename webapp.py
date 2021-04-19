@@ -10,7 +10,7 @@ def render_main():
 
 @app.route("/response", methods=['GET', 'POST'])
 def render_response():
-    state_selected = request.form['states']
+    state_selected = request.form(['states'])
     if request.method() == 'POST':
         return render_template('response.html', response = get_state_options(), responseTwo = get_county_options(state_selected), statefact = average_median_houseold_income(state_selected))
     else:
