@@ -8,7 +8,7 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     return render_template('home.html', response = get_state_options())
 
-@app.route("/response", methods=['GET', 'POST']))
+@app.route("/response", methods=['GET', 'POST'])
 def render_response():
     state_selected = request.form['states']
     if request.method() == 'POST':
